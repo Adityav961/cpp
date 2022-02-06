@@ -1,9 +1,10 @@
+https://practice.geeksforgeeks.org/problems/union-of-two-linked-list/1#
+
 // { Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
 
-struct Node
-{
+struct Node{
 	int data;
 	struct Node* next;
 	
@@ -14,28 +15,23 @@ struct Node
 	
 };
 
-struct Node* buildList(int size)
-{
+struct Node* buildList(int size){
     int val;
     cin>> val;
     
     Node* head = new Node(val);
     Node* tail = head;
     
-    for(int i=0; i<size-1; i++)
-    {
+    for(int i=0; i<size-1; i++){
         cin>> val;
         tail->next = new Node(val);
         tail = tail->next;
     }
-    
     return head;
 }
 
-void printList(Node* n)
-{
-    while(n)
-    {
+void printList(Node* n){
+    while(n){
         cout<< n->data << " ";
         n = n->next;
     }
@@ -44,12 +40,10 @@ void printList(Node* n)
 
 struct Node* makeUnion(struct Node* head1, struct Node* head2);
 
-int main()
-{
+int main(){
     int t;
     cin>>t;
-    while(t--)
-    {
+    while(t--){
         int n, m;
         
         cin>>n;
